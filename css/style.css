@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedorGeneral{
+    display: grid;
+    width: 99%;
+    margin: 1px;
+    grid-gap: 1px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+}
+/* HEADER */
+.navBar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #F8F9FA;
+}
+
+.nav-link{
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+.nav-link:hover{
+    background-color: rgb(0, 0, 0);
+    color: azure;
+}
+
+/* FOOTER */
+.footer{
+    grid-area: footer;
+    background-color: rgb(212, 129, 129);
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: (3);
+    grid-template-areas: 
+    "logoFooter newsletter redes" 
+    
+}
+
+.logoFooter{
+    grid-area: logoFooter;
+    width: 150px;
+    padding: 3px;
+    background-image: cover;
+}
+
+
+.newsletter label{
+    grid-area: textoNewsletter;
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 20px 20px 1px 20px;
+    align-items: center;
+}
+
+.newsletter input{
+    grid-area: newsletter;
+    display: flex;
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: bisque;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    height: 40px;
+    width: 400px;
+}
+
+.redes{
+    grid-area: redes;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    padding: 20px;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.redes ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.redes li{
+    display: flex;
+    justify-content: space-around;
+}
+
+.redes li a{
+    display: flex;
+    text-decoration: none;
+    color: rgb(252, 250, 248);
+    padding: 1rem; 
+}
+
+.redes li a:hover{
+    color: black;
+}
+
+/* MAIN INDEX */
+
+.presentacion{
+    display: grid;
+    background-color: rgb(240, 184, 162);
+    grid-gap: 1px;
+    grid-template-columns: (3, auto);
+    grid-template-areas: 
+    "bannerIndex seccion1 seccion1"
+}
+
+.seccion1{
+    grid-area: seccion1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.seccion1 h2{
+    padding: 15px;
+}
+.imgBanner{
+    width: 100%;
+}
+
+.bannerIndex{
+    grid-area: bannerIndex;
+    display: flex;
+    width: 100%;
+}
+
+.imgIndex{
+    width: 100%;
+}
+
+.destacados{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(201, 128, 98, 0.89), rgba(83, 56, 48, 0.658));
+    align-items: center;
+    border-radius: 5px;
+}
+
+.destacados h2{
+    display: block;
+    padding: 40px;
+    border: 2px;
+    text-align: center;
+    border: 1px;
+    border-color: beige;
+}
+
+.destacados h2 tituloDestacados{
+    border-color: beige
+}
+
+.destacadosSeleccion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    padding: 10px;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0,5rem;
+}
+
+.producto:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 1s;
+}
+
+.textoProducto{
+    color: antiquewhite;
+    font-weight: bold;
+    top: 10px;
+    padding:1rem;
+    margin: 1rem;
+    left: 140px;
+    border: solid 2px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+/* DEGUSTACIONES */
+
+.degustaciones{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    background-color: rgb(240, 184, 162);
+    padding: 2px;
+    grid-template-areas: 
+    "imgDegustacion contenidoDegustacion"
+    "imgDegustacion formularioDegustaciones"
+}
+
+.imgDegustacion{
+    grid-area: imgDegustacion;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+
+.contenidoDegustacion{
+    grid-area: contenidoDegustacion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+}
+
+.formularioDegustaciones{
+    grid-area: formularioDegustaciones;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    padding: 0px 10px 0px 10px;
+}
+
+.formularioDegustaciones label{
+    display: block;
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+}
+
+.formularioDegustaciones input{
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: bisque;
+    text-align: center;
+    font-size: 100%;
+    height: 40px;
+    width: 100%;
+    margin: 1rem;
+}
+
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* TABLET */
+@media (max-width: 768px){
+
+     /* FOOTER */
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logoFooter{
+        width: 0px;
+    }
+
+    .newsletter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .newsletter label{
+        padding: 1rem;
+    }
+
+    /* INDEX */
+    .presentacion{
+        grid-template-areas: 
+        "seccion1 seccion1 seccion1"
+    }
+
+    .imgIndex{
+        max-width: 0px;
+    }
+
+
+    .textoProducto{  
+        display: flex;
+        flex-direction: column;      
+    }
+
+
+    /* DEGUSTACIONES */
+    .degustaciones{    
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 3;
+        background-color: rgb(240, 184, 162);
+        padding: 2px;
+        grid-template-areas: 
+        "imgDegustacion contenidoDegustacion"
+        "formularioDegustaciones formularioDegustaciones"
+    }
+    
+    .imgDegustacion{
+        width: 80vh;
+    }
+
+    .cajaForm{
+        display: flex;
+    }
+
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* MOBILE */
+@media (max-width:480px){
+
+    /* FOOTER */
+    .newsletter{
+        display: grid;
+        grid-template-areas:
+        "textoNewsletter"
+        "newsletter"
+    }
+
+    .redes{
+        justify-content: center;
+    }
+
+    /* DEGUSTACIONES */
+
+    .degustaciones{
+        display: grid;
+        grid-template-rows: 3;
+        grid-template-areas: 
+        "imgDegustacion"
+        "contenidoDegustacion"
+        "formularioDegustaciones"
+    }
+
+    .imgDegustacion{
+        width: 100vw;
+        padding-bottom: 10px;
+    }
+
+
+}
